@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Ini untuk semua*/
+* {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;    
+}
+
+/* Ini kalau isi pagenya tidak ada yang bisa discroll bakal hilang otomatis scroll atas bawahnya */
+body {
+    overflow-y: auto;
+}
+
+/* Ini bagian membentuk navbar */
+.navbar {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    border: 1px solid black;
+    position: sticky;
+    margin-top: 0;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;    
+    z-index: 999;
+}
+
+.navbar img {
+    height: 100%;
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.navbar .find_us {
+    background-color: #26282B;
+    color: white;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-right: 20px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Ini bagian untuk halaman home */
+.home-container {
+    height: 600px;
+    background-color: #0F100B;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ini bagian konten pada halaman home */
+.home-container img {
+    height: auto;
+    width: 80%;
+    position: absolute;
+    left: 60%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.home-container .teks_home {
+    color: white;    
+    position: absolute;
+    top: 35%;
+    z-index: 1;
+    left: 8%;
+}
+
+.home-container p {
+    width: 35%;
+    margin-top: 10px;
+}
+
+.home-container .kenali {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    width: 15%;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* Ini bagian product  */
+.product-container {
+    height: 500px;
+}
+
+.product-container h1 {
+    text-align: center;
+    margin-top: 15px;
+}
