@@ -113,10 +113,20 @@ a.active {
 
 /* Ini bagian product  */
 .product-container {
-  height: 500px;
+  height: 600px;
 }
 
 .product-container h1 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Ini bagian about us  */
+.about-container {
+  height: 600px;
+}
+
+.about-container h1 {
   text-align: center;
   margin-top: 15px;
 }

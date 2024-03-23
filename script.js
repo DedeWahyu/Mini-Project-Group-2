@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Untuk animasi fitur & tambah kelas
   $(".fitur a").click(function (e) {
     $(".fitur a").removeClass("active");
     $(this).addClass("active");
@@ -15,5 +16,10 @@ $(document).ready(function () {
         );
       }
     }
+  });
+
+  // Untuk event klik logo
+  $("#logo").click(function (e) {
+    e.preventDefault();
   });
 });
