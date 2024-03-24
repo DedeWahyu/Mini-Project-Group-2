@@ -266,10 +266,10 @@ a.active {
 /* Ini bagian footer  */
 .footer {
   height: 200px;  
-  background-color: black;
+  background-color: #0e0f10;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;  
 }
 
 .footer .logo-footer {
@@ -277,7 +277,9 @@ a.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: 20px;
 }
 
 .footer .logo-footer p {
@@ -289,7 +291,11 @@ a.active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
+}
+
+.footer .halaman-footer, .footer .media-sosial {
+  margin: 20px;
 }
 
 .footer .halaman-footer h2, a {
@@ -310,10 +316,14 @@ a.active {
 
 .footer .media-sosial .instagram, .facebook {
   display: flex;  
-  align-items: center;
+  align-items: center;  
 }
 
-.footer .media-sosial .instagram p, .facebook p {
+.footer .media-sosial .facebook, .instagram {
+  margin-top: 10px;
+}
+
+.footer .media-sosial p {
   color: white;
   margin-left: 10px;
 }
@@ -321,6 +331,8 @@ a.active {
 .footer .media-sosial .instagram img, .facebook img{
   height: 30px;
   width: 30px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 /* Ini bagian floating whatsapp */
