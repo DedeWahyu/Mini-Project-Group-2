@@ -123,12 +123,72 @@ a.active {
 
 /* Ini bagian about us  */
 .about-container {
-  height: 600px;
+  height: 700px;
+  position: relative;
 }
 
 .about-container h1 {
   text-align: center;
   margin-top: 15px;
+}
+
+.about-container .teks-about {
+  width: 60%;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-container .gambar-about {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;    
+}
+
+.about-container .gambar-about img {
+  width: 339px;
+  height: 267px;
+}
+
+.about-container .kotak-about {
+  width: 428px;
+  height: 129px;
+  border: 1px solid black;
+  position: absolute;
+  left: 56.5%;
+  bottom: 60px;  
+  z-index: 1;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 1280px) and (min-height: 768px) {
+  .about-container .kotak-about {
+    left: 56.3%
+  }
+}
+
+.about-container .kotak-about .about-teks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container .kotak-about h1 {
+  color: white;
+}
+
+.about-container .kotak-about p {
+  color: white;
+}
+
+
+.about-container .teks-about p {
+  font-size: 20px;
 }
 
 /* Ini bagian location  */
