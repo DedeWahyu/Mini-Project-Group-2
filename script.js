@@ -61,6 +61,29 @@ $(document).ready(function () {
       1000
     );
   });
+
+  // Untuk event contact wa hide ketika sampai ke footer
+  const footer = $('#footer');
+  const contactContainer = $('.contact-container');
+      
+    function isAtFooter() {
+      const scrollPosition = $(window).scrollTop();
+      const footerPosition = footer.offset().top;
+      const windowHeight = $(window).height();
+
+      return scrollPosition >= (footerPosition - windowHeight);
+    }
+      
+    function toggleContactContainer() {
+      if (isAtFooter()) {
+        contactContainer.hide();
+      } else {
+        contactContainer.show();
+      }
+    }
+      
+    $(window).on('load scroll', toggleContactContainer);
+
   $(window).on("beforeunload", function () {
     $(window).scrollTop(0);
   });
