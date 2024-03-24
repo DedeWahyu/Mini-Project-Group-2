@@ -1,16 +1,32 @@
-$(window).on("beforeunload", function () {
-  $(window).scrollTop(0);
-});
 $(document).ready(function () {
+  // Reset location hash
   if (window.location.hash) {
     window.location.hash = "";
   }
 
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 10) { 
-      $('.navbar').addClass('shadow'); 
+  // Menambahkan kelas active ke elemen fitur saat menggulir
+  $(window).scroll(function () {
+    var scrollPos = $(document).scrollTop();
+    var offset = 70; // Ubah nilai offset sesuai kebutuhan
+    $(".fitur a").each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (
+        refElement.position().top - offset < scrollPos &&
+        refElement.position().top + refElement.height() > scrollPos
+      ) {
+        $(".fitur a").removeClass("active");
+        currLink.addClass("active");
+      }
+    });
+  });
+
+  // Menambahkan kelas active ketika fitur di click
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 10) {
+      $(".navbar").addClass("shadow");
     } else {
-      $('.navbar').removeClass('shadow'); 
+      $(".navbar").removeClass("shadow");
     }
   });
 
@@ -45,30 +61,7 @@ $(document).ready(function () {
       1000
     );
   });
-});
-$(window).on("load hashchange", function () {
-  var hash = window.location.hash;
-  if (hash == "#home" || hash == "") {
-    $('.fitur a[href="' + hash + '"]').addClass("active");
-  } else {
-    $(".fitur a").removeClass("active");
-    $('.fitur a[href="' + hash + '"]').addClass("active");
-  }
-});
-
-// Menambahkan kelas active ke elemen fitur saat menggulir
-$(window).scroll(function () {
-  var scrollPos = $(document).scrollTop();
-  var offset = 70; // Ubah nilai offset sesuai kebutuhan
-  $(".fitur a").each(function () {
-    var currLink = $(this);
-    var refElement = $(currLink.attr("href"));
-    if (
-      refElement.position().top - offset < scrollPos &&
-      refElement.position().top + refElement.height() > scrollPos
-    ) {
-      $(".fitur a").removeClass("active");
-      currLink.addClass("active");
-    }
+  $(window).on("beforeunload", function () {
+    $(window).scrollTop(0);
   });
 });
