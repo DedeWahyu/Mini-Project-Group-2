@@ -1,45 +1,33 @@
-$(document).ready(function () {
+$(window).on("beforeunload", function () {
+  $(window).scrollTop(0);
+});
+$(window).on("load hashchange", function () {
   var hash = window.location.hash;
-  if (hash == "" || hash == "#home") {
-    $('.fitur a[href="#home"]').addClass("active");
+  if (hash == "#home" || hash == "") {
+    $('.fitur a[href="' + hash + '"]').addClass("active");
   } else {
     $(".fitur a").removeClass("active");
     $('.fitur a[href="' + hash + '"]').addClass("active");
   }
+});
 
-  // Mengatur posisi halaman ke paling atas
-  $("html, body").animate(
-    {
-      scrollTop: 0,
-    },
-    0
-  );
-  $(window).on("load hashchange", function () {
-    var hash = window.location.hash;
-    if (hash == "#home") {
-      $('.fitur a[href="' + hash + '"]').addClass("active");
-    } else {
+// Menambahkan kelas active ke elemen fitur saat menggulir
+$(window).scroll(function () {
+  var scrollPos = $(document).scrollTop();
+  var offset = 70; // Ubah nilai offset sesuai kebutuhan
+  $(".fitur a").each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (
+      refElement.position().top - offset < scrollPos &&
+      refElement.position().top + refElement.height() > scrollPos
+    ) {
       $(".fitur a").removeClass("active");
-      $('.fitur a[href="' + hash + '"]').addClass("active");
+      currLink.addClass("active");
     }
   });
-
-  // Menambahkan kelas active ke elemen fitur saat menggulir
-  $(window).scroll(function () {
-    var scrollPos = $(document).scrollTop();
-    var offset = 70; // Ubah nilai offset sesuai kebutuhan
-    $(".fitur a").each(function () {
-      var currLink = $(this);
-      var refElement = $(currLink.attr("href"));
-      if (
-        refElement.position().top - offset < scrollPos &&
-        refElement.position().top + refElement.height() > scrollPos
-      ) {
-        $(".fitur a").removeClass("active");
-        currLink.addClass("active");
-      }
-    });
-  });
+});
+$(document).ready(function () {
   // Untuk animasi fitur & tambah kelas
   $(".fitur a").click(function (e) {
     $(".fitur a").removeClass("active");
