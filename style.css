@@ -28,7 +28,12 @@ body {
   align-items: center;
   justify-content: center;
   justify-content: space-between;
+  transition: box-shadow 0.3s ease;
   z-index: 999;
+}
+
+.navbar.shadow {
+  box-shadow: 0 4px 8px 0 rgb(245, 162, 58, 1);
 }
 
 .navbar img {
