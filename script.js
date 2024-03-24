@@ -5,6 +5,15 @@ $(document).ready(function () {
   if (window.location.hash) {
     window.location.hash = "";
   }
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 10) { 
+      $('.navbar').addClass('shadow'); 
+    } else {
+      $('.navbar').removeClass('shadow'); 
+    }
+  });
+
   // Untuk animasi fitur & tambah kelas
   $(".fitur a").click(function (e) {
     $(".fitur a").removeClass("active");
