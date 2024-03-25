@@ -184,8 +184,8 @@ $(document).ready(function () {
   wrapper.addEventListener("mouseleave", autoPlay);
 });
 function toggleMenu() {
-  var menu = document.getElementById("navbar-menu");
-  var toggleButton = document.querySelector(".navbar-toggle");
-  menu.classList.toggle("active");
-  toggleButton.classList.toggle("active");
+  var menu = $("#navbar-menu");
+  var toggleButton = $(".navbar-toggle");
+  menu.toggleClass("active");
+  toggleButton.toggleClass("active");
 }
