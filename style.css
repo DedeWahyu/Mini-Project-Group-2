@@ -541,17 +541,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;  
+  text-align: center;
 }
 
 /* Gaya individual untuk kartu dalam carousel */
 .carousel .card {
   scroll-snap-align: start; /* Pastikan kartu snap ke awal grid */
-  height: 360px; /* Atur tinggi kartu */
+  height: 375px; /* Atur tinggi kartu */
   width: 240px;
   list-style: none;
   background: #fff;
-  cursor: pointer;    
+  cursor: pointer;
   flex-direction: column;
   border-radius: 8px;
 }
@@ -598,21 +598,21 @@ a {
 
 /* Gaya tombol */
 .cek-harga-btn {
-  background-color: black; 
-  color: white; 
-  border: none; 
+  background-color: black;
+  color: white;
+  border: none;
   padding: 10px 20px;
-  margin-top: 5px; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  transition: background-color 0.3s, color 0.3s; 
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Efek hover */
 .cek-harga-btn:hover {
   background-color: transparent;
-  border: 2px solid black; 
-  color: black; 
+  border: 2px solid black;
+  color: black;
 }
 
 /* Media queries untuk responsivitas */
@@ -629,5 +629,3 @@ a {
     grid-auto-columns: 100%; /* Sesuaikan lebar kolom menjadi 100% untuk layar yang lebih kecil */
   }
 }
-
-
