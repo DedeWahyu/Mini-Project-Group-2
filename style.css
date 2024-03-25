@@ -186,24 +186,6 @@ a.active {
   cursor: pointer;
 }
 
-/* Ini bagian product  */
-.product-container {
-  background: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 35px;
-  min-height: 50vh;
-  margin-top: 20px;
-}
-
-.product-container h1 {
-  text-align: center;
-  margin: 15px 0; /* Menyesuaikan margin atas dan bawah */
-  color: white;
-}
-
 /* Ini bagian about us  */
 .about-container {
   height: 700px;
@@ -460,6 +442,24 @@ a {
 
 .contact-container:hover {
   transform: scale(1.1);
+}
+
+/* Ini bagian product  */
+.product-container {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+  min-height: 50vh;
+  margin-top: 20px;
+}
+
+.product-container h1 {
+  text-align: center;
+  margin: 15px 0; /* Menyesuaikan margin atas dan bawah */
+  color: white;
 }
 
 /* Gaya untuk elemen wrapper */
