@@ -316,7 +316,7 @@ a.active {
 
 .footer .media-sosial .instagram, .facebook {
   display: flex;  
-  align-items: center;  
+  align-items: center;    
 }
 
 .footer .media-sosial .facebook, .instagram {
