@@ -583,6 +583,35 @@ a {
   font-size: 1.31rem;
 }
 
+.carousel .card h3 {
+  color: black;
+  font-size: 1rem;
+  display: none;
+}
+
+.carousel .card p {
+  color: black;
+  display: none;
+}
+
+/* Gaya tombol */
+.cek-harga-btn {
+  background-color: black; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Efek hover */
+.cek-harga-btn:hover {
+  background-color: transparent;
+  border: 2px solid black; 
+  color: black; 
+}
+
 /* Media queries untuk responsivitas */
 @media screen and (max-width: 900px) {
   .wrapper .carousel {
@@ -597,3 +626,5 @@ a {
     grid-auto-columns: 100%; /* Sesuaikan lebar kolom menjadi 100% untuk layar yang lebih kecil */
   }
 }
+
+
