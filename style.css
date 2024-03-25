@@ -541,6 +541,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;  
 }
 
 /* Gaya individual untuk kartu dalam carousel */
@@ -549,8 +550,7 @@ a {
   height: 342px; /* Atur tinggi kartu */
   list-style: none;
   background: #fff;
-  cursor: pointer;
-  padding-bottom: 15px;
+  cursor: pointer;    
   flex-direction: column;
   border-radius: 8px;
 }
@@ -560,6 +560,7 @@ a {
   background: #8b53ff;
   height: 148px;
   width: 148px;
+  margin-top: 20px;
 }
 
 /* Gaya gambar dalam kartu */
@@ -599,7 +600,8 @@ a {
   background-color: black; 
   color: white; 
   border: none; 
-  padding: 10px 20px; 
+  padding: 10px 20px;
+  margin-top: 5px; 
   border-radius: 5px; 
   cursor: pointer; 
   transition: background-color 0.3s, color 0.3s; 
