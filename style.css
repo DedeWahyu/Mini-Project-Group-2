@@ -192,15 +192,12 @@ a.active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 35px;
-  min-height: 50vh;
+  justify-content: center;    
   margin-top: 20px;
 }
 
 .product-container h1 {
-  text-align: center;
-  margin: 15px 0; /* Menyesuaikan margin atas dan bawah */
+  text-align: center;  
   color: white;
 }
 
