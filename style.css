@@ -55,18 +55,6 @@ a.active {
   font-weight: 600;
 }
 
-.navbar .find_us {
-  background-color: #26282b;
-  color: white;
-  padding: 5px;
-  padding-left: 35px;
-  padding-right: 35px;
-  margin-right: 20px;
-  border-radius: 50px;
-  text-align: center;
-  cursor: pointer;
-}
-
 /* Ini bagian untuk halaman home */
 .home-container {
   height: 600px;
