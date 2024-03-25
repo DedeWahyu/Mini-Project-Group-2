@@ -547,7 +547,8 @@ a {
 /* Gaya individual untuk kartu dalam carousel */
 .carousel .card {
   scroll-snap-align: start; /* Pastikan kartu snap ke awal grid */
-  height: 342px; /* Atur tinggi kartu */
+  height: 300px; /* Atur tinggi kartu */
+  width: 200px;
   list-style: none;
   background: #fff;
   cursor: pointer;    
