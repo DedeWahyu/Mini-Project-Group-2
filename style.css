@@ -295,7 +295,7 @@ a.active {
 }
 
 .footer .halaman-footer, .footer .media-sosial {
-  margin: 20px;
+  margin-top: 30px;
 }
 
 .footer .halaman-footer h2, a {
@@ -303,7 +303,7 @@ a.active {
 }
 
 .footer .halaman-footer a {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .footer .media-sosial {
@@ -314,9 +314,9 @@ a.active {
   color: white;
 }
 
-.footer .media-sosial .instagram, .facebook {
+.footer .media-sosial .instagram, .footer .media-sosial .facebook {
   display: flex;  
-  align-items: center;    
+  align-items: center;  
 }
 
 .footer .media-sosial .facebook, .instagram {
@@ -332,7 +332,7 @@ a.active {
   height: 30px;
   width: 30px;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 20px;  
 }
 
 /* Ini bagian floating whatsapp */
