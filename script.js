@@ -182,6 +182,28 @@ $(document).ready(function () {
   carousel.addEventListener("scroll", infiniteScroll);
   wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
   wrapper.addEventListener("mouseleave", autoPlay);
+
+  $(".cek-harga-btn").click(function() {
+    var card = $(this).closest(".card");
+    var namaProduk = card.find("h2").text();
+    var deskripsiProduk = card.find(".deskripsi").text();
+    var hargaProduk = card.find(".harga").text();
+  
+    // Tampilkan SweetAlert dengan detail produk
+    Swal.fire({
+      title: 'Detail Produk',
+      html: `
+        <div>
+          <b>Nama:</b> ${namaProduk}<br>
+          <b>Deskripsi:</b> ${deskripsiProduk}<br>
+          <b>Harga:</b> ${hargaProduk}
+        </div>
+      `,
+      icon: false,
+      confirmButtonText: 'Tutup'
+    });
+  });
+  
 });
 function toggleMenu() {
   var menu = $("#navbar-menu");
