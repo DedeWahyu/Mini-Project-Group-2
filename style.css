@@ -210,7 +210,8 @@ a.active {
 
 /* Gaya untuk ikon dalam wrapper */
 .wrapper i {
-  top: 50%;
+  top: 45%;
+  left: 95.5%;
   height: 50px;
   width: 50px;
   cursor: pointer;
