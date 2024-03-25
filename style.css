@@ -189,23 +189,20 @@ a.active {
 /* Ini bagian product  */
 .product-container {
   background: black;
-  display: flex;
+  display: grid;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 600px;
-  margin-top: 20px;
+  height: 500px;
 }
 
 .product-container h1 {
+  margin-top: 5px;
   text-align: center;
-  margin: 15px 0; /* Menyesuaikan margin atas dan bawah */
-  color: white;
+  color: white;  
 }
 
 /* Gaya untuk elemen wrapper */
 .wrapper {
-  margin: auto;
   max-width: 1100px;
   width: 100%;
   position: relative;

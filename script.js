@@ -7,7 +7,7 @@ $(document).ready(function () {
   // Menambahkan kelas active ke elemen fitur saat menggulir
   $(window).scroll(function () {
     var scrollPos = $(document).scrollTop();
-    var offset = 36; // Ubah nilai offset sesuai kebutuhan
+    var offset = 76; // Ubah nilai offset sesuai kebutuhan
     $(".fitur a").each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
