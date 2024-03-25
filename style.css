@@ -22,11 +22,9 @@ body {
   padding-right: 40px;
   background-color: #0e0f10;
   position: sticky;
-  margin-top: 0;
-  top: 0px;
+  top: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: space-between;
   box-shadow: 0 4px 8px 0 rgb(245, 162, 58, 1);
   z-index: 999;
@@ -44,15 +42,103 @@ body {
   cursor: pointer;
   font-weight: 500;
 }
+
 .fitur a {
   color: #575757;
 }
+
 .fitur a:hover {
   color: whitesmoke;
 }
+
 a.active {
   color: white;
   font-weight: 600;
+}
+
+/* Hide menu saat layar kecil */
+#navbar-menu {
+  display: flex;
+}
+
+/* Tombol toggle untuk layar kecil */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 999;
+}
+
+.navbar-toggle span {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(245, 162, 58, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styling ketika tombol toggle di-klik */
+.navbar-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Styling menu saat layar kecil */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar img {
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  .navbar a {
+    display: none; /* Menyembunyikan link saat layar kecil */
+  }
+
+  /* Menampilkan tombol toggle saat layar kecil */
+  .navbar-toggle {
+    display: flex;
+  }
+
+  /* Menampilkan menu saat tombol toggle di-klik */
+  #navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #0e0f10;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 998;
+  }
+
+  #navbar-menu.active {
+    display: flex;
+  }
+
+  .fitur a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
 }
 
 /* Ini bagian untuk halaman home */

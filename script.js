@@ -183,3 +183,9 @@ $(document).ready(function () {
   wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
   wrapper.addEventListener("mouseleave", autoPlay);
 });
+function toggleMenu() {
+  var menu = document.getElementById("navbar-menu");
+  var toggleButton = document.querySelector(".navbar-toggle");
+  menu.classList.toggle("active");
+  toggleButton.classList.toggle("active");
+}
