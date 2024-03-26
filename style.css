@@ -186,6 +186,11 @@ a.active {
   cursor: pointer;
 }
 
+.home-container .kenali:hover {
+  transform: translateY(-20%) scale(1.1);
+  transition: 1s ease;
+}
+
 /* Ini bagian product  */
 .product-container {
   background: black;
