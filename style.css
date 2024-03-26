@@ -548,6 +548,19 @@ a.active {
   align-items: center;
 }
 
+.footer .halaman-footer #fitur-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .halaman-footer #fitur-footer #location-footer {
+  color: #575757;
+}
+
+.footer .halaman-footer #fitur-footer #location-footer:hover {
+  color: whitesmoke;  
+}
+
 .footer .halaman-footer,
 .footer .media-sosial {
   margin-top: 30px;
