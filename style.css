@@ -408,7 +408,7 @@ a.active {
   border: 1px solid black;
   position: absolute;
   left: 56.5%;
-  bottom: 60px;
+  bottom: 120px;
   z-index: 1;
   background-color: black;
   display: flex;
