@@ -29,10 +29,17 @@ $(document).ready(function () {
     if ($(target).length) {
       if (target.charAt(0) === "#home") {
         window.location.href = target;
-      } else {
+      } else if (target === "#product") {
         $("html, body").animate(
           {
             scrollTop: $(target).offset().top - 55,
+          },
+          1000
+        );
+      } else {
+        $("html, body").animate(
+          {
+            scrollTop: $(target).offset().top - 70,
           },
           1000
         );
