@@ -192,13 +192,14 @@ a.active {
   display: grid;
   flex-direction: column;
   justify-content: center;
-  height: 500px;
+  height: 550px;
 }
 
 .product-container h1 {
+  padding-top: 20px;
   margin-top: 5px;
   text-align: center;
-  color: white;  
+  color: white;
 }
 
 /* Gaya untuk elemen wrapper */
@@ -206,6 +207,7 @@ a.active {
   max-width: 1100px;
   width: 100%;
   position: relative;
+  padding-bottom: 20px;
 }
 
 /* Gaya untuk ikon dalam wrapper */
@@ -436,7 +438,7 @@ a.active {
 }
 
 .about-container .teks-about p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* Ini bagian location  */
