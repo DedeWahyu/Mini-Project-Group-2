@@ -1,218 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Masaglasses</title>
-    <link rel="icon" href="Gambar/icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="script.js"></script>
-  </head>
 
-  <body>
-    <nav class="navbar">
-      <img src="Gambar\logo_name.png" alt="logo" id="logo" />
-      <button class="navbar-toggle" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="fitur" id="navbar-menu">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#product">Products</a>
-        <a href="#location">Location</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masaglasses</title>
+  <link rel="icon" href="Gambar/icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <img src="Gambar\logo_name.png" alt="logo" id="logo" />
+    <button class="navbar-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="fitur" id="navbar-menu">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#product">Products</a>
+      <a href="#location">Location</a>
+    </div>
+  </nav>
+  <div class="home-container" id="home">
+    <div class="teks_home">
+      <h1>Temukan <br />Kacamata Favoritmu</h1>
+      <p>
+        Menemukan kacamata bukanlah hal yang sederhana. Anda perlu memilih
+        bingkai dan lensa yang sesuai dengan gaya anda. Menemukan toko yang
+        tepat akan mengurangi rasa overthinking anda.
+      </p>
+      <div class="kenali">Kenali Lebih Jauh</div>
+    </div>
+    <img
+      src="https://images.unsplash.com/photo-1516117525866-d85459db7457?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="foto" />
+  </div>
+  <div class="about-container" id="about">
+    <h1>About Us</h1>
+    <div class="teks-about">
+      <p>
+        Kami percaya bahwa kacamata bukan hanya alat koreksi visual, tetapi
+        juga pernyataan gaya yang unik untuk setiap individu. Dengan komitmen
+        kami untuk menyediakan pilihan terbaik untuk Anda, kami menawarkan
+        beragam jenis kacamata, mulai dari gaya klasik hingga tren terkini,
+        sehingga Anda dapat menemukan yang sesuai dengan kepribadian dan
+        kebutuhan Anda. Kualitas adalah prioritas utama kami. Setiap produk di
+        Toko Masaglasses dipilih dengan cermat untuk memastikan bahwa Anda
+        mendapatkan kacamata yang tidak hanya tahan lama, tetapi juga
+        memberikan kenyamanan optimal sepanjang hari.
+      </p>
+    </div>
+    <div class="gambar-about">
+      <img src="Gambar\dalam1.PNG" alt="dalam1" />
+      <img src="Gambar\luar1.PNG" alt="luar1" id="luar1" />
+      <img src="Gambar\dalam2.PNG" alt="dalam2" />
+      <div class="kotak-about">
+        <div class="about-teks">
+          <p>Telah berdiri sejak tahun</p>
+          <h1>2021</h1>
+        </div>
+        <div class="about-teks">
+          <p>Variasi kacamata</p>
+          <h1>50+</h1>
+        </div>
+        <div class="about-teks">
+          <p>Kualitas kacamata</p>
+          <h1>#1</h1>
+        </div>
       </div>
-    </nav>
-    <div class="home-container" id="home">
-      <div class="teks_home">
-        <h1>Temukan <br />Kacamata Favoritmu</h1>
+    </div>
+  </div>
+  <div class="product-container" id="product">
+    <h1>Product</h1>
+    <h1>Pilihan Paket</h1>
+    <div class="paket-container">
+      <div class="paket-card">
+        <h2>Paket Blueray</h2>
+        <div class="image">
+          <img src="/Gambar/lensa/blueray.png" alt="blueray">
+          <div class="overlay-paket">
+            <h2>Harga Paket Blueray</h2>
+            <p>Normal : Rp. 160.000</p>
+            <p>Minus/Plus : Rp. 180.000</p>
+            <p>Silinder : Rp. 200.000</p>
+            <p>Custom Frame : Free</p>
+          </div>
+        </div>
+        <p>Start From Rp. 100.000</p>
+      </div>
+      <div class="paket-card">
+        <h2>Paket Supersin</h2>
+        <div class="image">
+          <img src="/Gambar/lensa/supersin.png" alt="blueray">
+          <div class="overlay-paket">
+            <h2>Harga Paket Supersin</h2>
+            <p>Normal : Rp. 210.000</p>
+            <p>Minus/Plus : Rp. 230.000</p>
+            <p>Silinder : Rp. 250.000</p>
+            <p>Custom Frame : Free</p>
+          </div>
+        </div>
+        <p>Start From Rp. 200.000</p>
+      </div>
+      <div class="paket-card">
+        <h2>Paket Bluecromic</h2>
+        <div class="image">
+          <img src="/Gambar/lensa/bluecromic.png" alt="blueray">
+          <div class="overlay-paket">
+            <h2>Harga Paket Bluecromic</h2>
+            <p>Normal : Rp. 250.000</p>
+            <p>Minus/Plus : Rp. 270.000</p>
+            <p>Silinder : Rp. 300.000</p>
+            <p>Custom Frame : Free</p>
+          </div>
+        </div>
+        <p>Start From Rp. 200.000</p>
+      </div>
+      <div class="paket-card">
+        <h2>Paket Photocromic</h2>
+        <div class="image">
+          <img src="/Gambar/lensa/photocromic.png" alt="blueray">
+          <div class="overlay-paket">
+            <h2>Harga Paket Photocromic</h2>
+            <p>Normal : Rp. 250.000</p>
+            <p>Minus/Plus : Rp. 270.000</p>
+            <p>Silinder : Rp. 300.000</p>
+            <p>Custom Frame : Free</p>
+          </div>
+        </div>
+        <p>Start From Rp. 200.000</p>
+      </div>
+    </div>
+    <h1>Aneka Pilihan Frame</h1>
+    <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <ul class="carousel">
+        <li class="card">
+          <div class="img">
+            <img src="gambar/products/1.jpg" alt="img" draggable="false" />
+          </div>
+          <h2>kacamata 1</h2>
+          <span>Minus - Plus - Silinder - Biasa</span>
+          <p class="deskripsi">Deskripsi 1</p>
+          <h3 class="harga">Rp. 150.000</h3>
+          <button class="cek-harga-btn">Cek Detail</button>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="gambar/products/2.jpg" alt="img" draggable="false" />
+          </div>
+          <h2>kacamata 2</h2>
+          <span>Minus - Plus - Silinder - Biasa</span>
+          <p class="deskripsi">Deskripsi 2</p>
+          <h3 class="harga">Rp. 170.000</h3>
+          <button class="cek-harga-btn">Cek Detail</button>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="gambar/products/3.jpg" alt="img" draggable="false" />
+          </div>
+          <h2>kacamata 3</h2>
+          <span>Minus - Plus - Silinder - Biasa</span>
+          <p class="deskripsi">Deskripsi 3</p>
+          <h3 class="harga">Rp. 160.000</h3>
+          <button class="cek-harga-btn">Cek Detail</button>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="gambar/products/4.jpg" alt="img" draggable="false" />
+          </div>
+          <h2>kacamata 4</h2>
+          <span>Minus - Plus - Silinder - Biasa</span>
+          <p class="deskripsi">Deskripsi 4</p>
+          <h3 class="harga">Rp. 190.000</h3>
+          <button class="cek-harga-btn">Cek Detail</button>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="gambar/products/5.jpg" alt="img" draggable="false" />
+          </div>
+          <h2>kacamata 5</h2>
+          <span>Minus - Plus - Silinder - Biasa</span>
+          <p class="deskripsi">Deskripsi 5</p>
+          <h3 class="harga">Rp. 200.000</h3>
+          <button class="cek-harga-btn">Cek Detail</button>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="gambar/products/6.jpg" alt="img" draggable="false" />
+          </div>
+          <h2>kacamata 6</h2>
+          <span>Minus - Plus - Silinder - Biasa</span>
+          <p class="deskripsi">Deskripsi 6</p>
+          <h3 class="harga">Rp. 350.000</h3>
+          <button class="cek-harga-btn">Cek Detail</button>
+        </li>
+      </ul>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+  </div>
+  <div class="location-container" id="location">
+    <h1>Location</h1>
+    <div class="map-container">
+      <div class="map-card">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7971.66944122965!2d112.95309349159857!3d-2.5605606000000067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de29562432a5d0d%3A0x548d0f9b6ac2d4b9!2sMasaglasses!5e0!3m2!1sid!2sid!4v1711296771859!5m2!1sid!2sid"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="info-card">
+        <h3>Alamat</h3>
         <p>
-          Menemukan kacamata bukanlah hal yang sederhana. Anda perlu memilih
-          bingkai dan lensa yang sesuai dengan gaya anda. Menemukan toko yang
-          tepat akan mengurangi rasa overthinking anda.
+          Ketapang, Kec. Mentawa Baru Ketapang, Kota Sampit, Provinsi
+          Kalimantan Tengah
         </p>
-        <div class="kenali">Kenali Lebih Jauh</div>
-      </div>
-      <img
-        src="https://images.unsplash.com/photo-1516117525866-d85459db7457?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="foto"
-      />
-    </div>
-    <div class="about-container" id="about">
-      <h1>About Us</h1>
-      <div class="teks-about">
-        <p>
-          Kami percaya bahwa kacamata bukan hanya alat koreksi visual, tetapi
-          juga pernyataan gaya yang unik untuk setiap individu. Dengan komitmen
-          kami untuk menyediakan pilihan terbaik untuk Anda, kami menawarkan
-          beragam jenis kacamata, mulai dari gaya klasik hingga tren terkini,
-          sehingga Anda dapat menemukan yang sesuai dengan kepribadian dan
-          kebutuhan Anda. Kualitas adalah prioritas utama kami. Setiap produk di
-          Toko Masaglasses dipilih dengan cermat untuk memastikan bahwa Anda
-          mendapatkan kacamata yang tidak hanya tahan lama, tetapi juga
-          memberikan kenyamanan optimal sepanjang hari.
-        </p>
-      </div>
-      <div class="gambar-about">
-        <img src="Gambar\dalam1.PNG" alt="dalam1" />
-        <img src="Gambar\luar1.PNG" alt="luar1" id="luar1" />
-        <img src="Gambar\dalam2.PNG" alt="dalam2" />
-        <div class="kotak-about">
-          <div class="about-teks">
-            <p>Telah berdiri sejak tahun</p>
-            <h1>2021</h1>
-          </div>
-          <div class="about-teks">
-            <p>Variasi kacamata</p>
-            <h1>50+</h1>
-          </div>
-          <div class="about-teks">
-            <p>Kualitas kacamata</p>
-            <h1>#1</h1>
-          </div>
-        </div>
+        <p>JI. Kopi Selatan No.11A (seberang jalan delima 5)</p>
+        <p>Buka Jam 08.00-20.00</p>
+        <a class="button"
+          href="https://www.google.com/maps?q=JI.%20Kopi%20Selatan%20No.11A,%20Sampit,%20Kalimantan%20Tengah"
+          target="_blank">Dapatkan Maps</a>
       </div>
     </div>
-    <div class="product-container" id="product">
-      <h1>Product</h1>
-      <h1>Aneka Pilihan Frame</h1>
-      <div class="wrapper">
-        <i id="left" class="fa-solid fa-angle-left"></i>
-        <ul class="carousel">
-          <li class="card">
-            <div class="img">
-              <img src="gambar/products/1.jpg" alt="img" draggable="false" />
-            </div>
-            <h2>kacamata 1</h2>
-            <span>Minus - Plus - Silinder - Biasa</span>
-            <p class="deskripsi">Deskripsi 1</p>
-            <h3 class="harga">Rp. 150.000</h3>
-            <button class="cek-harga-btn">Cek Detail</button>
-          </li>
-          <li class="card">
-            <div class="img">
-              <img src="gambar/products/2.jpg" alt="img" draggable="false" />
-            </div>
-            <h2>kacamata 2</h2>
-            <span>Minus - Plus - Silinder - Biasa</span>
-            <p class="deskripsi">Deskripsi 2</p>
-            <h3 class="harga">Rp. 170.000</h3>
-            <button class="cek-harga-btn">Cek Detail</button>
-          </li>
-          <li class="card">
-            <div class="img">
-              <img src="gambar/products/3.jpg" alt="img" draggable="false" />
-            </div>
-            <h2>kacamata 3</h2>
-            <span>Minus - Plus - Silinder - Biasa</span>
-            <p class="deskripsi">Deskripsi 3</p>
-            <h3 class="harga">Rp. 160.000</h3>
-            <button class="cek-harga-btn">Cek Detail</button>
-          </li>
-          <li class="card">
-            <div class="img">
-              <img src="gambar/products/4.jpg" alt="img" draggable="false" />
-            </div>
-            <h2>kacamata 4</h2>
-            <span>Minus - Plus - Silinder - Biasa</span>
-            <p class="deskripsi">Deskripsi 4</p>
-            <h3 class="harga">Rp. 190.000</h3>
-            <button class="cek-harga-btn">Cek Detail</button>
-          </li>
-          <li class="card">
-            <div class="img">
-              <img src="gambar/products/5.jpg" alt="img" draggable="false" />
-            </div>
-            <h2>kacamata 5</h2>
-            <span>Minus - Plus - Silinder - Biasa</span>
-            <p class="deskripsi">Deskripsi 5</p>
-            <h3 class="harga">Rp. 200.000</h3>
-            <button class="cek-harga-btn">Cek Detail</button>
-          </li>
-          <li class="card">
-            <div class="img">
-              <img src="gambar/products/6.jpg" alt="img" draggable="false" />
-            </div>
-            <h2>kacamata 6</h2>
-            <span>Minus - Plus - Silinder - Biasa</span>
-            <p class="deskripsi">Deskripsi 6</p>
-            <h3 class="harga">Rp. 350.000</h3>
-            <button class="cek-harga-btn">Cek Detail</button>
-          </li>
-        </ul>
-        <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+  <div class="footer" id="footer">
+    <div class="logo-footer">
+      <img src="Gambar/logo_name.png" alt="logo" />
+    </div>
+    <div class="halaman-footer">
+      <h2>Halaman</h2>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#product">Product</a>
+      <a href="#location" id="location-footer">Location</a>
+    </div>
+    <div class="media-sosial">
+      <h2>Media Sosial</h2>
+      <div class="instagram">
+        <a href="https://www.instagram.com/masaglasses/" target="_blank">
+          <img src="Gambar/ig.png" alt="ig" />
+          <span>@masaglasses</span>
+        </a>
+      </div>
+      <div class="facebook">
+        <a href="https://www.facebook.com/masaglasses.masaglasses/" target="_blank">
+          <img src="Gambar\fb.png" alt="fb" />
+          <span>masaglasses</span>
+        </a>
       </div>
     </div>
-    <div class="location-container" id="location">
-      <h1>Location</h1>
-      <div class="map-container">
-        <div class="map-card">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7971.66944122965!2d112.95309349159857!3d-2.5605606000000067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de29562432a5d0d%3A0x548d0f9b6ac2d4b9!2sMasaglasses!5e0!3m2!1sid!2sid!4v1711296771859!5m2!1sid!2sid"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="info-card">
-          <h3>Alamat</h3>
-          <p>
-            Ketapang, Kec. Mentawa Baru Ketapang, Kota Sampit, Provinsi
-            Kalimantan Tengah
-          </p>
-          <p>JI. Kopi Selatan No.11A (seberang jalan delima 5)</p>
-          <p>Buka Jam 08.00-20.00</p>
-          <a
-            class="button"
-            href="https://www.google.com/maps?q=JI.%20Kopi%20Selatan%20No.11A,%20Sampit,%20Kalimantan%20Tengah"
-            target="_blank"
-            >Dapatkan Maps</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="footer" id="footer">
-      <div class="logo-footer">
-        <img src="Gambar/logo_name.png" alt="logo" />
-      </div>
-      <div class="halaman-footer">
-        <h2>Halaman</h2>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#product">Product</a>
-        <a href="#location" id="location-footer">Location</a>
-      </div>
-      <div class="media-sosial">
-        <h2>Media Sosial</h2>
-        <div class="instagram">
-          <a href="https://www.instagram.com/masaglasses/" target="_blank">
-            <img src="Gambar/ig.png" alt="ig" />
-            <span>@masaglasses</span>
-          </a>
-        </div>
-        <div class="facebook">
-          <a
-            href="https://www.facebook.com/masaglasses.masaglasses/"
-            target="_blank"
-          >
-            <img src="Gambar\fb.png" alt="fb" />
-            <span>masaglasses</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="contact-container">
-      <a href="https://wa.me/6281234567890" target="_blank"
-        ><span> Contact Us </span>
-        <img src="Gambar/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"
-      /></a>
-    </div>
-  </body>
+  </div>
+  <div class="contact-container">
+    <a href="https://wa.me/6281234567890" target="_blank"><span> Contact Us </span>
+      <img src="Gambar/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" /></a>
+  </div>
+</body>
+
 </html>
