@@ -199,8 +199,8 @@ $(document).ready(function () {
       title: "Detail Produk",
       html: `
        <div>
-         <b>Nama:</b> ${namaProduk}<br>
-         <b>Deskripsi:</b> ${deskripsiProduk}<br>
+         <b>Nama: </b>${namaProduk}<br>
+         <b>Bahan: </b>${deskripsiProduk}<br>
        </div>
      `,
       icon: false,
