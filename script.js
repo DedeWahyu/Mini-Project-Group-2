@@ -22,7 +22,7 @@ $(document).ready(function () {
   });
 
   // Untuk animasi fitur & tambah kelas
-  $(".fitur a").click(function (e) {
+  $(".fitur a,.halaman-footer a").click(function (e) {
     $(".fitur a").removeClass("active");
     $(this).addClass("active");
     var target = $(this).attr("href");
