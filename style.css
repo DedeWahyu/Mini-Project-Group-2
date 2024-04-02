@@ -202,7 +202,7 @@ a.active {
 
 .product-container h1 {
   padding-top: 20px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
   color: white;
@@ -384,7 +384,7 @@ p {
 .carousel .card h2 {
   font-weight: 500;
   font-size: 1.56rem;
-  margin: 30px 0 5px;
+  margin: 30px 10px 5px;
 }
 
 /* Gaya span dalam kartu */
@@ -396,7 +396,7 @@ p {
 .carousel .card h2 {
   color: black;
   font-size: 20px;
-  margin-top: 0;  
+  margin-top: 0;
   margin-top: 10px;
 }
 
