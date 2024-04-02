@@ -68,12 +68,13 @@ $(document).ready(function () {
     success: function (data) {
       $.each(data.packages, (packageName, packageData) => {
         var paketName = $(".paket-card." + packageName);
-        paketName.prepend("<h2>" + packageData.name + "</h2>");
         var paketImg = $(".paket-card." + packageName + " .image");
+        var overlayPaket = $(".paket-card." + packageName + " .overlay-paket");
+
+        paketName.prepend("<h2>" + packageData.name + "</h2>");
         paketImg.prepend(
           "<img src=" + packageData.image + " alt=" + packageName + " />"
         );
-        var overlayPaket = $(".paket-card." + packageName + " .overlay-paket");
         overlayPaket.empty();
         overlayPaket.append(
           "<h2>Harga Paket " +
@@ -89,6 +90,7 @@ $(document).ready(function () {
         overlayPaket.append(
           "<p>Custom Frame : " + packageData.customFrame + "</p>"
         );
+        paketName.append("<p>Start From " + packageData.price + "</p>");
       });
     },
     error: (xhr, status, error) => {
