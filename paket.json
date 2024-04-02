@@ -36,5 +36,37 @@
       "customFrame": "Free",
       "price": "Rp. 250.000"
     }
-  }
+  },
+  "frames": [
+    {
+      "image": "Gambar/products/1.jpg",
+      "name": "Frame tipe 1",
+      "description": "Plastik"
+    },
+    {
+      "image": "Gambar/products/2.jpg",
+      "name": "Frame tipe 2",
+      "description": "Plastik"
+    },
+    {
+      "image": "Gambar/products/3.jpg",
+      "name": "Frame tipe 3",
+      "description": "Plastik"
+    },
+    {
+      "image": "Gambar/products/4.jpg",
+      "name": "Frame tipe 4",
+      "description": "Alumunium"
+    },
+    {
+      "image": "Gambar/products/5.jpg",
+      "name": "Frame tipe 5",
+      "description": "Alumunium"
+    },
+    {
+      "image": "Gambar/products/6.jpg",
+      "name": "Frame tipe 6",
+      "description": "Alumunium"
+    }
+  ]
 }
