@@ -62,23 +62,32 @@ $(document).ready(function () {
 
   // ini untuk ajax mengambil data dari paket.json lalu ditampilkan
   $.ajax({
-    url: 'https://dedewahyu.github.io/Mini-Project-Group-2/paket.json',
-    type: 'GET',
-    dataType: 'json',
-    success: function(data) {
-        // Memasukkan data harga ke dalam elemen .overlay-paket untuk setiap paket
-        $.each(data.packages, function(packageName, packageData) {
-            var overlayPaket = $('.paket-card.' + packageName + ' .overlay-paket');
-            overlayPaket.find('h2').text('Harga Paket ' + packageName.charAt(0).toUpperCase() + packageName.slice(1));
-            overlayPaket.find('p:eq(0)').text('Normal : ' + packageData.normal);
-            overlayPaket.find('p:eq(1)').text('Minus/Plus : ' + packageData.minusPlus);
-            overlayPaket.find('p:eq(2)').text('Silinder : ' + packageData.silinder);
-            overlayPaket.find('p:eq(3)').text('Custom Frame : ' + packageData.customFrame);
-        });
+    url: "https://dedewahyu.github.io/Mini-Project-Group-2/paket.json",
+    type: "GET",
+    dataType: "json",
+    success: function (data) {
+      $.each(data.packages, (packageName, packageData) => {
+        var overlayPaket = $(".paket-card." + packageName + " .overlay-paket");
+        overlayPaket.empty();
+        overlayPaket.append(
+          "<h2>Harga Paket " +
+            packageName.charAt(0).toUpperCase() +
+            packageName.slice(1) +
+            "</h2>"
+        );
+        overlayPaket.append("<p>Normal : " + packageData.normal + "</p>");
+        overlayPaket.append(
+          "<p>Minus/Plus : " + packageData.minusPlus + "</p>"
+        );
+        overlayPaket.append("<p>Silinder : " + packageData.silinder + "</p>");
+        overlayPaket.append(
+          "<p>Custom Frame : " + packageData.customFrame + "</p>"
+        );
+      });
     },
-    error: function(xhr, status, error) {
-        console.error(error);
-    }
+    error: (xhr, status, error) => {
+      console.error(error);
+    },
   });
 
   // Untuk event contact wa hide ketika sampai ke footer

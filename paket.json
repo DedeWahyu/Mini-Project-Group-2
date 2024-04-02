@@ -1,29 +1,36 @@
 {
-    "packages": {
-      "blueray": {
-        "normal": "Rp. 160.000",
-        "minusPlus": "Rp. 180.000",
-        "silinder": "Rp. 200.000",
-        "customFrame": "Free"
-      },
-      "supersin": {
-        "normal": "Rp. 210.000",
-        "minusPlus": "Rp. 230.000",
-        "silinder": "Rp. 250.000",
-        "customFrame": "Free"
-      },
-      "bluecromic": {
-        "normal": "Rp. 250.000",
-        "minusPlus": "Rp. 270.000",
-        "silinder": "Rp. 300.000",
-        "customFrame": "Free"
-      },
-      "photocromic": {
-        "normal": "Rp. 250.000",
-        "minusPlus": "Rp. 270.000",
-        "silinder": "Rp. 300.000",
-        "customFrame": "Free"
-      }
+  "packages": {
+    "blueray": {
+      "name": "Paket Blueray",
+      "image": "Gambar/lensa/blueray.png",
+      "normal": "Rp. 160.000",
+      "minusPlus": "Rp. 180.000",
+      "silinder": "Rp. 200.000",
+      "customFrame": "Free"
+    },
+    "supersin": {
+      "name": "Paket Supersin",
+      "image": "Gambar/lensa/supersin.png",
+      "normal": "Rp. 210.000",
+      "minusPlus": "Rp. 230.000",
+      "silinder": "Rp. 250.000",
+      "customFrame": "Free"
+    },
+    "bluecromic": {
+      "name": "Paket Bluecromic",
+      "image": "Gambar/lensa/bluecromic.png",
+      "normal": "Rp. 250.000",
+      "minusPlus": "Rp. 270.000",
+      "silinder": "Rp. 300.000",
+      "customFrame": "Free"
+    },
+    "photocromic": {
+      "name": "Paket Photocromic",
+      "image": "Gambar/lensa/photocromic.png",
+      "normal": "Rp. 250.000",
+      "minusPlus": "Rp. 270.000",
+      "silinder": "Rp. 300.000",
+      "customFrame": "Free"
     }
   }
-  
+}
