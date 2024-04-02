@@ -62,7 +62,7 @@ $(document).ready(function () {
 
   // ini untuk ajax mengambil data dari paket.json lalu ditampilkan
   $.ajax({
-    url: 'paket.json',
+    url: 'https://dedewahyu.github.io/Mini-Project-Group-2/paket.json',
     type: 'GET',
     dataType: 'json',
     success: function(data) {
