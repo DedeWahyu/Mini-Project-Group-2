@@ -66,6 +66,7 @@ $(document).ready(function () {
     type: "GET",
     dataType: "json",
     success: function (data) {
+      // Generate Paket
       $.each(data.packages, (packageName, packageData) => {
         var paketName = $(".paket-card." + packageName);
         var paketImg = $(".paket-card." + packageName + " .image");
@@ -92,38 +93,69 @@ $(document).ready(function () {
         );
         paketName.append("<p>Start From " + packageData.price + "</p>");
       });
+      // generate frame
+      var frameListHtml = "";
+      $.each(data.frames, function (index, frame) {
+        frameListHtml +=
+          '<li class="card">' +
+          '<div class="img"><img src="' +
+          frame.image +
+          '" alt="img" draggable="false" /></div>' +
+          "<h2>" +
+          frame.name +
+          "</h2>" +
+          '<p class="deskripsi">' +
+          frame.description +
+          "</p>" +
+          '<button class="cek-harga-btn">Cek Detail</button>' +
+          "</li>";
+      });
+      $(".carousel").html(frameListHtml);
+      swipe();
     },
     error: (xhr, status, error) => {
       console.error(error);
     },
   });
-
   // Untuk event contact wa hide ketika sampai ke footer
-  const footer = $("#footer");
-  const contactContainer = $(".contact-container");
-
-  function isAtFooter() {
-    const scrollPosition = $(window).scrollTop();
-    const footerPosition = footer.offset().top;
-    const windowHeight = $(window).height();
-
-    return scrollPosition >= footerPosition - windowHeight;
-  }
-
-  function toggleContactContainer() {
-    if (isAtFooter()) {
-      contactContainer.hide();
-    } else {
-      contactContainer.show();
-    }
-  }
-
   $(window).on("load scroll", toggleContactContainer);
 
+  // Untuk mereset lokasi ketika meninggalkan web
   $(window).on("beforeunload", function () {
     $(window).scrollTop(0);
   });
+});
 
+// Function untuk mendeteksi apakah sudah sampai footer
+const isAtFooter = () => {
+  const footer = $("#footer");
+  const scrollPosition = $(window).scrollTop();
+  const footerPosition = footer.offset().top;
+  const windowHeight = $(window).height();
+
+  return scrollPosition >= footerPosition - windowHeight;
+};
+
+// Function hide/show contact us
+const toggleContactContainer = () => {
+  const contactContainer = $(".contact-container");
+  if (isAtFooter()) {
+    contactContainer.hide();
+  } else {
+    contactContainer.show();
+  }
+};
+
+// Function on mini display
+const toggleMenu = () => {
+  var menu = $("#navbar-menu");
+  var toggleButton = $(".navbar-toggle");
+  menu.toggleClass("active");
+  toggleButton.toggleClass("active");
+};
+
+// Function swipe
+const swipe = () => {
   // Seleksi elemen-elemen jQuery yang diperlukan
   const wrapper = $(".wrapper"); // Wrapper carousel
   const carousel = $(".carousel"); // Kontainer carousel
@@ -245,10 +277,4 @@ $(document).ready(function () {
       confirmButtonText: "Tutup",
     });
   });
-});
-function toggleMenu() {
-  var menu = $("#navbar-menu");
-  var toggleButton = $(".navbar-toggle");
-  menu.toggleClass("active");
-  toggleButton.toggleClass("active");
-}
+};
