@@ -67,6 +67,12 @@ $(document).ready(function () {
     dataType: "json",
     success: function (data) {
       $.each(data.packages, (packageName, packageData) => {
+        var paketName = $(".paket-card." + packageName);
+        paketName.prepend("<h2>" + packageData.name + "</h2>");
+        var paketImg = $(".paket-card." + packageName + " .image");
+        paketImg.prepend(
+          "<img src=" + packageData.image + " alt=" + packageName + " />"
+        );
         var overlayPaket = $(".paket-card." + packageName + " .overlay-paket");
         overlayPaket.empty();
         overlayPaket.append(
