@@ -60,6 +60,27 @@ $(document).ready(function () {
     );
   });
 
+  // ini untuk ajax mengambil data dari paket.json lalu ditampilkan
+  $.ajax({
+    url: 'paket.json',
+    type: 'GET',
+    dataType: 'json',
+    success: function(data) {
+        // Memasukkan data harga ke dalam elemen .overlay-paket untuk setiap paket
+        $.each(data.packages, function(packageName, packageData) {
+            var overlayPaket = $('.paket-card.' + packageName + ' .overlay-paket');
+            overlayPaket.find('h2').text('Harga Paket ' + packageName.charAt(0).toUpperCase() + packageName.slice(1));
+            overlayPaket.find('p:eq(0)').text('Normal : ' + packageData.normal);
+            overlayPaket.find('p:eq(1)').text('Minus/Plus : ' + packageData.minusPlus);
+            overlayPaket.find('p:eq(2)').text('Silinder : ' + packageData.silinder);
+            overlayPaket.find('p:eq(3)').text('Custom Frame : ' + packageData.customFrame);
+        });
+    },
+    error: function(xhr, status, error) {
+        console.error(error);
+    }
+  });
+
   // Untuk event contact wa hide ketika sampai ke footer
   const footer = $("#footer");
   const contactContainer = $(".contact-container");
