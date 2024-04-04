@@ -8,12 +8,14 @@ $(document).ready(function () {
     url: "https://dedewahyu.github.io/Mini-Project-Group-2/paket.json",
     type: "GET",
     dataType: "json",
-    success: function (data) {
+    success: (data) => {
       // Generate Paket
       $.each(data.packages, (packageName, packageData) => {
-        var paketName = $(".paket-card." + packageName);
-        var paketImg = $(".paket-card." + packageName + " .image");
-        var overlayPaket = $(".paket-card." + packageName + " .overlay-paket");
+        var paketName = $(".packet-card." + packageName);
+        var paketImg = $(".packet-card." + packageName + " .image");
+        var overlayPaket = $(
+          ".packet-card." + packageName + " .packet-overlay"
+        );
 
         paketName.prepend("<h2>" + packageData.name + "</h2>");
         paketImg.prepend(
@@ -38,7 +40,7 @@ $(document).ready(function () {
       });
       // generate frame
       var frameListHtml = "";
-      $.each(data.frames, function (index, frame) {
+      $.each(data.frames, (index, frame) => {
         frameListHtml +=
           '<li class="card">' +
           '<div class="img"><img src="' +
@@ -60,26 +62,26 @@ $(document).ready(function () {
       console.error(error);
     },
   });
-  // Menambahkan kelas active ke elemen fitur saat menggulir
+  // Menambahkan kelas active ke elemen features saat menggulir
   $(window).scroll(function () {
     var scrollPos = $(document).scrollTop();
     var offset = 76; // Ubah nilai offset sesuai kebutuhan
-    $(".fitur a").each(function () {
+    $(".features a").each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
       if (
         refElement.position().top - offset < scrollPos &&
         refElement.position().top + refElement.height() > scrollPos
       ) {
-        $(".fitur a").removeClass("active");
+        $(".features a").removeClass("active");
         currLink.addClass("active");
       }
     });
   });
 
-  // Untuk animasi fitur & tambah kelas
-  $(".fitur a,.halaman-footer a").click(function (e) {
-    $(".fitur a").removeClass("active");
+  // Untuk animasi features & tambah kelas
+  $(".features a,.footer-menu a").click(function (e) {
+    $(".features a").removeClass("active");
     $(this).addClass("active");
     var target = $(this).attr("href");
     if ($(target).length) {
@@ -103,14 +105,14 @@ $(document).ready(function () {
     }
   });
 
-  // Untuk event klik kenali
-  $(".kenali").click(function (e) {
+  // Untuk event klik home-more
+  $(".home-more").click(function (e) {
     e.preventDefault();
-    $(".fitur a").removeClass("active");
-    $(".fitur a[href='#about']").addClass("active");
+    $(".features a").removeClass("active");
+    $(".features a[href='#about']").addClass("active");
     $("html, body").animate(
       {
-        scrollTop: $("#about").offset().top - 55,
+        scrollTop: $("#about").offset().top - 70,
       },
       1000
     );
@@ -156,10 +158,10 @@ const toggleMenu = () => {
 // Function swipe
 const swipe = () => {
   // Seleksi elemen-elemen jQuery yang diperlukan
-  const wrapper = $(".wrapper"); // Wrapper carousel
+  const buttonSelection = $(".button-selection"); // buttonSelection carousel
   const carousel = $(".carousel"); // Kontainer carousel
   const firstCardWidth = $(".carousel .card").outerWidth(); // Lebar kartu pertama dalam carousel
-  const arrowBtns = $(".wrapper i"); // Tombol panah kiri dan kanan
+  const arrowBtns = $(".button-selection i"); // Tombol panah kiri dan kanan
   const carouselChildrens = carousel.children(); // Anak-anak dari carousel
 
   // Variabel untuk menandai status drag dan autoplay
@@ -235,7 +237,7 @@ const swipe = () => {
 
     // Hapus timeout yang ada & mulai autoplay jika mouse tidak berada di atas carousel
     clearTimeout(timeoutId);
-    if (!wrapper.is(":hover")) autoPlay();
+    if (!buttonSelection.is(":hover")) autoPlay();
   };
 
   // Fungsi untuk autoplay
@@ -254,11 +256,11 @@ const swipe = () => {
   carousel.on("mousemove", dragging);
   $(document).on("mouseup", dragStop);
   carousel.on("scroll", infiniteScroll);
-  wrapper.on("mouseenter", () => clearTimeout(timeoutId));
-  wrapper.on("mouseleave", autoPlay);
+  buttonSelection.on("mouseenter", () => clearTimeout(timeoutId));
+  buttonSelection.on("mouseleave", autoPlay);
 
   // Menggunakan event delegation untuk menangani klik pada tombol "cek-harga-btn" yang dinamis
-  wrapper.on("click", ".cek-harga-btn", function () {
+  buttonSelection.on("click", ".cek-harga-btn", function () {
     var card = $(this).closest(".card");
     var namaProduk = card.find("h2").text();
     var deskripsiProduk = card.find(".deskripsi").text();
