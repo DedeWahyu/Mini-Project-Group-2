@@ -95,52 +95,6 @@ a.active {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Styling menu saat layar kecil */
-@media screen and (max-width: 768px) {
-  .navbar {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .navbar img {
-    height: 40px;
-    margin-left: 10px;
-  }
-
-  .navbar a {
-    display: none; /* Menyembunyikan link saat layar kecil */
-  }
-
-  /* Menampilkan tombol toggle saat layar kecil */
-  .navbar-toggle {
-    display: flex;
-  }
-
-  /* Menampilkan menu saat tombol toggle di-klik */
-  #navbar-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #0e0f10;
-    position: absolute;
-    top: 55px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 998;
-  }
-
-  #navbar-menu.active {
-    display: flex;
-  }
-
-  .features a {
-    display: block;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-  }
-}
-
 /* Ini bagian untuk halaman home */
 .home-container {
   height: 600px;
@@ -179,7 +133,7 @@ a.active {
   font-weight: bold;
   text-align: center;
   padding: 10px;
-  width: 15%;
+  width: fit-content;
   border-radius: 25px;
   background-color: white;
   color: black;
@@ -189,6 +143,76 @@ a.active {
 .home-container .home-more:hover {
   transform: translateY(-20%) scale(1.1);
   transition: 1s ease;
+}
+
+/* Ini bagian about us  */
+.about-container {
+  height: 700px;
+  position: relative;
+}
+
+.about-container h1 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.about-container .about-text {
+  width: 60%;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-container .about-image {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.about-container .about-image img {
+  width: 339px;
+  height: 267px;
+}
+
+.about-container .about-text-frame-sub {
+  width: 428px;
+  height: 129px;
+  border: 1px solid #11100e;
+  position: absolute;
+  left: 56.5%;
+  bottom: 120px;
+  z-index: 1;
+  background-color: #11100e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 1280px) and (min-height: 768px) {
+  .about-container .about-text-frame-sub {
+    left: 56.3%;
+  }
+}
+
+.about-container .about-text-frame-sub .about-text-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container .about-text p {
+  font-size: 18px;
+  color: black;
+}
+
+.about-container .about-text-sub h1 {
+  color: white;
+}
+
+.about-container .about-text-sub p {
+  color: white !important;
 }
 
 /* Ini bagian product  */
@@ -424,91 +448,6 @@ p {
   color: black;
 }
 
-/* Media queries untuk responsivitas */
-@media screen and (max-width: 900px) {
-  .button-selection .carousel {
-    grid-auto-columns: calc(
-      (100% / 2) - 9px
-    ); /* Sesuaikan lebar kolom untuk layar yang lebih kecil */
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .button-selection .carousel {
-    grid-auto-columns: 100%; /* Sesuaikan lebar kolom menjadi 100% untuk layar yang lebih kecil */
-  }
-}
-
-/* Ini bagian about us  */
-.about-container {
-  height: 700px;
-  position: relative;
-}
-
-.about-container h1 {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.about-container .about-text {
-  width: 60%;
-  text-align: center;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about-container .about-image {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-}
-
-.about-container .about-image img {
-  width: 339px;
-  height: 267px;
-}
-
-.about-container .about-text-frame-sub {
-  width: 428px;
-  height: 129px;
-  border: 1px solid black;
-  position: absolute;
-  left: 56.5%;
-  bottom: 120px;
-  z-index: 1;
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media screen and (min-width: 1280px) and (min-height: 768px) {
-  .about-container .about-text-frame-sub {
-    left: 56.3%;
-  }
-}
-
-.about-container .about-text-frame-sub .about-text-sub {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.about-container .about-text p {
-  font-size: 18px;
-  color: black;
-}
-
-.about-container .about-text-sub h1 {
-  color: white;
-}
-
-.about-container .about-text-sub p {
-  color: white !important;
-}
-
 /* Ini bagian location  */
 .location-container {
   height: 600px;
@@ -667,7 +606,7 @@ a {
 .contact-container {
   position: fixed;
   bottom: 20px;
-  left: 85%;
+  right: 2%;
   display: flex;
   align-items: center;
   z-index: 1000;
@@ -697,4 +636,280 @@ a {
 
 .contact-container:hover {
   transform: scale(1.1);
+}
+
+/* Resposivitas */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+
+  .navbar img {
+    margin-left: 5px;
+    height: 40px;
+  }
+
+  .navbar a {
+    display: none; /* Menyembunyikan link saat layar kecil */
+  }
+
+  /* Menampilkan tombol toggle saat layar kecil */
+  .navbar-toggle {
+    display: flex;
+  }
+
+  /* Menampilkan menu saat tombol toggle di-klik */
+  #navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #0e0f10;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 998;
+  }
+
+  #navbar-menu.active {
+    display: flex;
+  }
+
+  .features a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
+  .home-container {
+    height: 600px;
+  }
+
+  /* Ini bagian konten pada halaman home */
+  .home-container img {
+    height: fit-content;
+    width: 120%;
+    left: 70%;
+    top: 50%;
+    object-fit: contain;
+  }
+
+  .home-container .home-text {
+    top: 15%;
+  }
+  .home-container h1 {
+    font-size: 120%;
+  }
+
+  .home-container p {
+    font-size: 100%;
+  }
+
+  .home-container .home-more {
+    width: fit-content;
+    font-size: 100%;
+    white-space: nowrap;
+  }
+  .about-container {
+    height: fit-content;
+    position: relative;
+  }
+
+  .about-container .about-image {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .about-container .about-image img {
+    width: 239px;
+    height: 167px;
+    margin: 5px 70px;
+    object-fit: cover;
+  }
+
+  .about-container .about-text-frame-sub {
+    width: 100%;
+    height: 140px;
+    background-color: #11100e;
+    border: none;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-wrap: break-word;
+    padding: 0 5%;
+  }
+  .product-container {
+    height: fit-content;
+    width: auto;
+  }
+  .product-container .packet-container {
+    display: contents;
+    position: relative;
+  }
+
+  .product-container .packet-container .packet-card {
+    border: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .product-container .packet-container .packet-card img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .product-container .packet-container .packet-card .image {
+    margin: 10px 0;
+  }
+  /* Gaya untuk elemen button-selection */
+  .button-selection {
+    max-width: 768px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 20px;
+    margin-left: -30px;
+    z-index: 10;
+  }
+
+  /* Gaya untuk ikon dalam button-selection */
+  .button-selection i {
+    top: 45%;
+    left: 104%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+
+  /* Status aktif untuk ikon */
+  .button-selection i:active {
+    transform: translateY(-50%) scale(0.85);
+  }
+
+  /* Posisi untuk ikon child pertama dan terakhir */
+  .button-selection i:first-child {
+    left: -6px;
+  }
+  .button-selection i:last-child {
+    right: -30px;
+  }
+  .carousel {
+    z-index: -100;
+    width: 350px;
+    left: 5%;
+    position: relative;
+  }
+  /* Gaya untuk kontainer carousel */
+  .button-selection .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(
+      (100%) - 80px
+    ); /* Menyesuaikan lebar kolom berdasarkan jumlah item */
+    gap: 2px;
+    border-radius: 8px;
+  }
+  .location-container {
+    height: fit-content;
+  }
+
+  .location-container h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .map-container {
+    position: relative;
+    display: block;
+    margin: 10px 10px 0px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map-card {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Untuk memusatkan secara horizontal */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .info-card {
+    width: 100%; /* Menggunakan lebar penuh */
+    max-width: 600px;
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* Untuk memusatkan secara horizontal dan memberikan jarak atas/bawah */
+  }
+  .footer {
+    position: relative;
+    height: 200px;
+    background-color: #0e0f10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer .logo-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 0;
+  }
+  .logo-footer img {
+    display: none;
+  }
+
+  .footer .footer-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .footer-menu,
+  .footer .footer-sosmed {
+    margin-top: 30px;
+    margin-left: 50px;
+  }
+  .contact-container {
+    right: 5%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    background-color: #26282b;
+    padding: 10px 10px;
+    border-radius: 50px;
+  }
+  .contact-container span {
+    display: none;
+  }
 }
